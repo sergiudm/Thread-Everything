@@ -7,14 +7,6 @@ class Config:
         self.config_path = config_path
         self.config_data = self.load_config()
 
-    def modify_path(self, path):
-        if os.name == "nt":
-            print("running on Windows")
-            json_file_path = path.replace("/", "\\")
-            path = os.path.abspath(json_file_path)
-
-        return path
-
     def load_config(self):
         if not os.path.exists(self.config_path):
             raise FileNotFoundError(f"Config file '{self.config_path}' not found.")

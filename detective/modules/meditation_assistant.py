@@ -14,15 +14,20 @@ from ..communication import send_email
 
 
 def get_path(parent_path):
-    # 获取当前文件的绝对路径
+    """
+    Get the absolute path by joining the parent directory of this file's parent directory with the given parent_path.
+    
+    Args:
+        parent_path (str): The relative path to join with the parent directory
+        
+    Returns:
+        str: The absolute path to the target directory or file
+    """
     current_file_path = os.path.abspath(__file__)
 
-    # 获取当前文件的父文件夹路径
     parent_parent_directory = os.path.dirname(os.path.dirname(current_file_path))
 
-    # 构建指向父文件夹中的 mailPic 目录的路径
     paths = os.path.join(parent_parent_directory, parent_path)
-    #print(paths)
     return paths
 
 
@@ -36,6 +41,9 @@ def send_relax_signal(
     smtp_port,
     target_email,
 ):
+    """
+    Send an email with the output image attached.
+    """
     output_path = os.path.join(path, "output_image.jpeg")
     success, img_output = cap.read()
     cv2.imwrite(output_path, img_output)
@@ -99,10 +107,6 @@ def relax_detect(
     pack_trans,
     setting_time,
 ):
-    # initial sensor pin
-    # Pin_buzzer = pin
-    # GPIO.setmode(GPIO.BCM)
-    # GPIO.setup(Pin_buzzer, GPIO.OUT)
     path = get_path(image_path)
     server_email = protocol[0]
     server_password = protocol[1]

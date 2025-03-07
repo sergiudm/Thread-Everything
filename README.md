@@ -5,10 +5,10 @@ Thread-Everything: 一个简单易用的跨平台多端通信工具
 [![PyPI version](https://badge.fury.io/py/detective-pi.svg)](https://pypi.org/project/Thread-Everything/)
 ![GitHub license](https://img.shields.io/github/license/sergiudm/detectivePi)
 ## 介绍
+![Thread-Everything](assets/images/logo.webp)
 
 [Thread-Everything](https://sergiudm.github.io/Thread-Everything/) 提供了易用的 Python API,同时运行*不同*主机上的任何线程，支持Windows, Linux, 可在X86, ARM主机上运行。
 
-![Thread-Everything](assets/images/logo.webp)
 
 通过Thread-Everything，你可以轻松地把你的功能部署到不同的主机上，实现多机通信。Thread-Everything提供了一套插件机制，你可以根据自己的需求[编写插件](https://sergiudm.github.io/Thread-Everything/plugins-tutorial/)，实现不同的功能，
 例如：
@@ -95,65 +95,47 @@ pip install -r requirements.txt
 开始前，你需要配置在项目根目录创建一个`config.json`文件，
 以下是一个示例，完整的配置文件请参考`config_template.json`。
 ```json
+```json
 {
     "use_pi": false,
-    "plugin_list": [
+    "plugin_list": [ # 插件列表
         "information_server",
         "GPIO_controller",
         "music_server",
         "gpio_controller",
         "gesture_detection",
-        "meditation_helper",
-    ], # 注意：涉及GPIO的插件要开启`use_pi`，如果不使用GPIO相关的库则关闭
+        "meditation_helper"
+    ],
     "use_camera": true,
-    "use_visualization": false, # 是否使用可视化
-    "server_email": "youremail@example.com",
-    "server_email_password": "your email password",# 请使用授权码
-    "target_email": [
-        "email1",
+    "use_visualization": false,
+    "server_email": "youremail@example.com", # 用于发送邮件的邮箱
+    "server_email_password": "your email password",
+    "target_email": [ # 接收邮件的邮箱列表
+        "email1", 
         "email2"
     ],
-    "smtp_server":"your smtp server",
+    "smtp_server": "your smtp server",
     "smtp_port": 587,
-    "video_path": "assets/videos/sit.mp4", # use_camera为false时，使用该视频
-    "image_path": "resources", # 邮件中的图片
+    "video_path": "assets/videos/sit.mp4",
+    "image_path": "resources",
     "send_delay": 13,
     "effective_detection_duration": 2,
     "max_num_hands": 2,
     "min_detection_confidence": 0.65,
     "min_tracking_confidence": 0.65,
-    "pin_data": {
-        "pin_list": [
-            17,
-            23,
-            24,
-            25,
-            27
-        ],
+    "pin_data": { # GPIO引脚配置（仅在树莓派上使用）
+        "pin_list": [17, 23, 24, 25],
         "pin_map": {
-            "Right": [
-                17,
-                23,
-                24
-            ],
-            "Return": [
-                23,
-                24
-            ],
-            "Left": [
-                17,
-                24
-            ],
+            "Right": [17, 23, 24],
+            "Return": [23, 24],
+            "Left": [17, 24],
             "Pause": [],
-            "Like": [
-                25
-            ],
-            "OK": [
-                27
-            ]
+            "Like": [25],
+            "OK": [27]
         }
     }
 }
+```
 ```
 >[!CAUTION] 
 实际使用时，请删除`config.json`中的所有注释!
