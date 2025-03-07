@@ -1,8 +1,23 @@
-![Thread-Everything](assets/images/logo.png)
-[![Deploy MkDocs site to GitHub Pages (using mkdocs gh-deploy)](https://github.com/sergiudm/detectivePi/actions/workflows/mkdocs.yml/badge.svg)](https://github.com/sergiudm/detectivePi/actions/workflows/mkdocs.yml)
-[![CI](https://github.com/sergiudm/detectivePi/actions/workflows/test.yml/badge.svg)](https://github.com/sergiudm/detectivePi/actions/workflowstest.yml)
-[![PyPI version](https://badge.fury.io/py/detective-pi.svg)](https://pypi.org/project/Thread-Everything/)
-![GitHub license](https://img.shields.io/github/license/sergiudm/detectivePi)
+<p align="center">
+    <a href="https://github.com/sergiudm/Thread-Everything">
+        <img src="assets/images/logo.png" alt="Logo" width=300px>
+    </a>
+</p>
+
+<p align="center">
+    <a href="https://github.com/sergiudm/Thread-Everything/actions/workflows/mkdocs.yml">
+        <img src="https://github.com/sergiudm/Thread-Everything/actions/workflows/mkdocs.yml/badge.svg" alt="MkDocs">
+    </a>
+    <a href="https://github.com/sergiudm/Thread-Everything/actions/workflows/test.yml">
+        <img src="https://github.com/sergiudm/Thread-Everything/actions/workflows/test.yml/badge.svg" alt="CI">
+    </a>
+    <a href="https://pypi.org/project/Thread-Everything/">
+        <img src="https://badge.fury.io/py/Thread-Everything.svg" alt="PyPI version">
+    </a>
+    <a href="https://github.com/sergiudm/Thread-Everything/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/sergiudm/Thread-Everything" alt="License">
+    </a>
+</p>
 
 # 简介
 [Thread-Everything](https://sergiudm.github.io/Thread-Everything/) 提供了易用的 Python API,同时运行*不同*主机上的任何线程，支持Windows, Linux, 可在X86, ARM主机上运行。
@@ -91,7 +106,7 @@ pip install -r requirements.txt
 
 # 🛠️ 使用说明
 >![WARNING]
->注意：不要直接使用`config_template.json`，请根据自己的需求修改`config.json`!
+注意：不要直接使用`config_template.json`，请根据自己的需求修改`config.json`!
 开始前，你需要配置在项目根目录创建一个`config.json`文件，
 以下是一个示例，完整的配置文件请参考`config_template.json`。
 ```json
