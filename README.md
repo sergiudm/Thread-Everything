@@ -4,13 +4,13 @@ Thread-Everything: 一个简单易用的跨平台多端通信工具
 [![CI](https://github.com/sergiudm/detectivePi/actions/workflows/test.yml/badge.svg)](https://github.com/sergiudm/detectivePi/actions/workflowstest.yml)
 [![PyPI version](https://badge.fury.io/py/detective-pi.svg)](https://pypi.org/project/Thread-Everything/)
 ![GitHub license](https://img.shields.io/github/license/sergiudm/detectivePi)
-## 介绍
-![Thread-Everything](assets/images/logo.webp)
 
+![Thread-Everything](assets/images/logo.png)
+## 介绍
 [Thread-Everything](https://sergiudm.github.io/Thread-Everything/) 提供了易用的 Python API,同时运行*不同*主机上的任何线程，支持Windows, Linux, 可在X86, ARM主机上运行。
 
 
-通过Thread-Everything，你可以轻松地把你的功能部署到不同的主机上，实现多机通信。Thread-Everything提供了一套插件机制，你可以根据自己的需求[编写插件](https://sergiudm.github.io/Thread-Everything/plugins-tutorial/)，实现不同的功能，
+使用Thread-Everything，你可以轻松地把某个线程的功能部署到不同的主机上，实现多机协同。Thread-Everything提供了一套插件机制，你可以根据自己的需求[编写插件](https://sergiudm.github.io/Thread-Everything/plugins-tutorial/)，实现不同的功能，
 例如：
 - 🤖 使用单个 Windows 客户端控制远程机器人。
 - 🎮 基于手势识别的在线动作游戏。
