@@ -1,12 +1,10 @@
-Thread-Everything: 一个简单易用的跨平台多端通信工具
-==================================================
+![Thread-Everything](assets/images/logo.png)
 [![Deploy MkDocs site to GitHub Pages (using mkdocs gh-deploy)](https://github.com/sergiudm/detectivePi/actions/workflows/mkdocs.yml/badge.svg)](https://github.com/sergiudm/detectivePi/actions/workflows/mkdocs.yml)
 [![CI](https://github.com/sergiudm/detectivePi/actions/workflows/test.yml/badge.svg)](https://github.com/sergiudm/detectivePi/actions/workflowstest.yml)
 [![PyPI version](https://badge.fury.io/py/detective-pi.svg)](https://pypi.org/project/Thread-Everything/)
 ![GitHub license](https://img.shields.io/github/license/sergiudm/detectivePi)
 
-![Thread-Everything](assets/images/logo.png)
-## 介绍
+# 简介
 [Thread-Everything](https://sergiudm.github.io/Thread-Everything/) 提供了易用的 Python API,同时运行*不同*主机上的任何线程，支持Windows, Linux, 可在X86, ARM主机上运行。
 
 
@@ -17,7 +15,7 @@ Thread-Everything: 一个简单易用的跨平台多端通信工具
 - 🎤 智能KTV（手势切歌、氛围灯等）。
 - ⚡ 通用GPIO调度器，零代码配置GPIO电平，秒杀大学里各种Lab作业。
 
-## 🏗️ 架构
+# 🏗️ 架构
 ```mermaid
 graph TD
     subgraph "Resource Manager"
@@ -61,13 +59,13 @@ graph TD
 ```
 本项目的核心模块是一个插件调度器，它负责加载插件并调度插件的执行。插件是一个独立的 Python 模块，它可以实现一些特定的功能，如控制GPIO电平、面部识别等。插件调度器会根据一个统一的配置文件控制插件的加载和执行。插件调度器是一个非常灵活的框架，用户可以根据需求自定义插件的功能。我们提供了视觉后端引擎、音乐引擎和状态机来简化插件的开发。基于现有框架，本项目实现了音乐播放器、手势识别、坐姿检测、GPIO切换器这几个插件。另外，这些功能还可通过通信模块实现P2P通信。
 
-## 运行环境
+# 运行环境
 | 环境   | 版本                         |
 | ------ | ---------------------------- |
 | OS     | Ubuntu22.04, Raspberry Pi OS, Window11, Debian 12|
 | Python | 3.10                         |
 
-## 🚀 安装
+# 🚀 安装
 ## pip安装
 ```bash
 pip install Thread-Everything
@@ -91,10 +89,11 @@ conda activate <your_env_name>
 pip install -r requirements.txt
 ```
 
-## 🛠️ 使用说明
+# 🛠️ 使用说明
+>![WARNING]
+>注意：不要直接使用`config_template.json`，请根据自己的需求修改`config.json`!
 开始前，你需要配置在项目根目录创建一个`config.json`文件，
 以下是一个示例，完整的配置文件请参考`config_template.json`。
-```json
 ```json
 {
     "use_pi": false,
@@ -136,7 +135,7 @@ pip install -r requirements.txt
     }
 }
 ```
-```
+
 >[!CAUTION] 
 实际使用时，请删除`config.json`中的所有注释!
 
